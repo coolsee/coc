@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<SceneProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <filePath>C:\Users\Administrator\Documents\ccs_project\FightScene\FightScene.xml.scene</filePath>
+  <Version>1.2.0.1</Version>
+  <Name>FightScene</Name>
+  <ProjectDir>C:\Users\Administrator\Documents\ccs_project\FightScene</ProjectDir>
+  <JsonFileName>FightScene.json</JsonFileName>
+  <Resources>C:\Users\Administrator\Documents\ccs_project\FightScene\Resources</Resources>
+  <JsonFolder>C:\Users\Administrator\Documents\ccs_project\FightScene\Json</JsonFolder>
+  <JsonList />
+  <CanvasSize>
+    <Width>960</Width>
+    <Height>640</Height>
+  </CanvasSize>
+  <JSFileList />
+  <DefaultUI_JSList />
+  <ExternalSimulatorPath>D:\Program Files\CocoStudio\Simulator.exe</ExternalSimulatorPath>
+  <ExternalCommand>-FLUSHTYPE 1 -XMLPATH C:\Users\Administrator\Documents\ccs_project\FightScene\FightScene.xml.scene</ExternalCommand>
+</SceneProject>

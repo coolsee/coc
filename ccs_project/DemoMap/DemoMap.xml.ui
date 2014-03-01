@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <filePath>E:\git\cocos2d-html5\mytest\ccs_project\DemoMap\DemoMap.xml.ui</filePath>
+  <Version>1.2.0.1</Version>
+  <Name>DemoMap</Name>
+  <ProjectDir>E:\git\cocos2d-html5\mytest\ccs_project\DemoMap</ProjectDir>
+  <JsonFileName>DemoMap.json</JsonFileName>
+  <Resources>E:\git\cocos2d-html5\mytest\ccs_project\DemoMap\Resources</Resources>
+  <JsonFolder>E:\git\cocos2d-html5\mytest\ccs_project\DemoMap\Json</JsonFolder>
+  <JsonList>
+    <string>MainScene.json</string>
+    <string>AniTestScene.json</string>
+  </JsonList>
+  <imageFileList>
+    <string>DemoMap0.plist</string>
+  </imageFileList>
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>MainScene.json</CurrentUIJson>
+  <CanvasSize>
+    <Width>960</Width>
+    <Height>640</Height>
+  </CanvasSize>
+</UIProject>
