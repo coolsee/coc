@@ -45,12 +45,13 @@ var TileLayer = cc.Layer.extend({
             //人物模型r
             var map = cc.TMXTiledMap.create(s_map2);
             this.addChild(map, 0, TAG_TILE_MAP);
+            cc.log("start addComponent")
             map.addComponent(MapController.create());
-
-            ccs.ArmatureDataManager.getInstance().addArmatureFileInfo(s_hero_json);
-            var armature = ccs.Armature.create("Hero");
-            map.addChild(armature, map.getChildren().length);
-            armature.addComponent(ActorController.create());
+            cc.log("end addComponent")
+//            ccs.ArmatureDataManager.getInstance().addArmatureFileInfo(s_hero_json);
+//            var armature = ccs.Armature.create("Hero");
+//            map.addChild(armature, map.getChildren().length);
+//            armature.addComponent(ActorController.create());
 
             return true;
         }

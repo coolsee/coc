@@ -32,7 +32,7 @@ Conf_Block_Type = 2;
 var MapController = ccs.ComController.extend({
     ctor: function () {
         this._super();
-        this._name = "MapController";
+        this.setName("MapController")
         this._running = true
     },
     init: function () {
@@ -66,6 +66,7 @@ var MapController = ccs.ComController.extend({
      * @return {Boolean}
      */
     onTouchBegan:function (touch, event) {
+        cc.log("onTouchBegan")
         return true;
     },
 
@@ -98,6 +99,7 @@ var MapController = ccs.ComController.extend({
      * @return {Boolean}
      */
     onTouchesBegan:function (touch, event) {
+        cc.log("onTouchesBegan")
         return true;
     },
 

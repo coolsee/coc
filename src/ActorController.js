@@ -25,7 +25,8 @@
 var ActorController = ccs.ComController.extend({
     ctor: function () {
         this._super();
-        this._name = "ActorController";
+        cc.log("ActorController ctor")
+        this.setName("ActorController")
         this._isTouchMoved = false;
 
         this._running = true

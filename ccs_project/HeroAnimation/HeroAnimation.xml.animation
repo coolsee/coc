@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <AnimationProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <filePath>C:\Users\Administrator\Documents\ccs_project\HeroAnimation\HeroAnimation.xml.animation</filePath>
+  <filePath>E:\git\cocos2d-html5\coc\ccs_project\HeroAnimation\HeroAnimation.xml.animation</filePath>
   <Version>1.2.0.1</Version>
   <Name>Hero</Name>
-  <ProjectDir>C:\Users\Administrator\Documents\ccs_project\HeroAnimation</ProjectDir>
+  <ProjectDir>E:\git\cocos2d-html5\coc\ccs_project\HeroAnimation</ProjectDir>
   <JsonFileName>Hero.json</JsonFileName>
-  <Resources>C:\Users\Administrator\Documents\ccs_project\HeroAnimation\Resources</Resources>
-  <JsonFolder>C:\Users\Administrator\Documents\ccs_project\HeroAnimation\Json</JsonFolder>
+  <Resources>E:\git\cocos2d-html5\coc\ccs_project\HeroAnimation\Resources</Resources>
+  <JsonFolder>E:\git\cocos2d-html5\coc\ccs_project\HeroAnimation\Json</JsonFolder>
   <JsonList />
   <ResourceFileList>
     <string>HeroAnimation0.plist</string>
