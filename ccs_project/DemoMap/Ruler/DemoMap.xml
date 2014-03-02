@@ -8,4 +8,8 @@
     <Project>AniTestScene</Project>
     <GuidesList />
   </GuidesProject>
+  <GuidesProject>
+    <Project>TileMapScene</Project>
+    <GuidesList />
+  </GuidesProject>
 </ArrayOfGuidesProject>

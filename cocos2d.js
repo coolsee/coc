@@ -38,10 +38,14 @@
         engineDir:'../cocos2d/',
         //SingleEngineFile:'',
         appFiles:[
-            'src/resource.js',
-            'src/myApp.js',
+            'src/ActorController.js',
             'src/AnimationScene.js',
-            'src/FightScene.js'
+            'src/FightScene.js',
+            'src/MapController.js',
+            'src/MainScene.js',
+            'src/resource.js',
+            'src/sprintf.js',
+            'src/TileScene.js',
         ]
     };
 

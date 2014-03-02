@@ -46,7 +46,6 @@ var cocos2dApp = cc.Application.extend({
         cc.log(JSON.stringify(screenSize))
         var resourceSize = cc.size(960, 640);
         var designSize = cc.size(960, 640);
-
         var searchPaths = [];
         var resDirOrders = [];
 
@@ -69,7 +68,7 @@ var cocos2dApp = cc.Application.extend({
 //        }
 
         cc.FileUtils.getInstance().setSearchResolutionsOrder(resDirOrders);
-        director.setContentScaleFactor(resourceSize.width / designSize.width);
+        director.setContentScaleFactor(screenSize.width / designSize.width);
         cc.EGLView.getInstance().setDesignResolutionSize(designSize.width, designSize.height, cc.RESOLUTION_POLICY.SHOW_ALL);
         cc.EGLView.getInstance().resizeWithBrowserSize(true);
 
@@ -88,4 +87,4 @@ var cocos2dApp = cc.Application.extend({
     }
 });
 
-var myApp = new cocos2dApp(MainScene);
+var myApp = new cocos2dApp(TileScene);

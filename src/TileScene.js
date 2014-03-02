@@ -1,3 +1,5 @@
+
+
 /****************************************************************************
  Copyright (c) 2010-2012 cocos2d-x.org
  Copyright (c) 2008-2010 Ricardo Quesada
@@ -24,75 +26,46 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-var MainLayer = cc.Layer.extend({
-    _uiLayer: null,
-    _widget: null,
-    _topDisplayLabel:null,
-    _bottomDisplayLabel:null,
+var TileLayer = cc.Layer.extend({
     ctor: function () {
         cc.Layer.prototype.ctor.call(this)
-        this._uiLayer = null;
-        this._widget = null;
     },
     init: function () {
         if (this._super()) {
+
             this._uiLayer = ccs.UILayer.create();
             this.addChild(this._uiLayer);
 
-            this._widget = ccs.GUIReader.getInstance().widgetFromJsonFile(s_SceneMain);
+            this._widget = ccs.GUIReader.getInstance().widgetFromJsonFile(s_SceneTile);
             this._uiLayer.addWidget(this._widget);
 
-            var btnAnimationTest = this._uiLayer.getWidgetByName("btnAniTest");
-            btnAnimationTest.addTouchEventListener(this.onClick_btnAnimationTest ,this);
-
-            var btnFightScene = this._uiLayer.getWidgetByName("btnFightScene");
-            btnFightScene.addTouchEventListener(this.onClick_btnFightScene ,this);
-
-            var desSize = cc.EGLView.getInstance().getDesignResolutionSize()
-            var winSize = cc.Director.getInstance().getWinSize();
-            cc.log(JSON.stringify(desSize))
-            cc.log("XZXXXXXXXXXXx")
-            cc.log(JSON.stringify(winSize))
-            var scale = winSize.height / desSize.height;
-            this._uiLayer.setAnchorPoint(0,0);
-            this._uiLayer.setScale(scale);
-            this._uiLayer.setPosition(cc.p((winSize.width - desSize.width * scale) / 2, (winSize.height - desSize.height * scale) / 2));
-
-            // 添加模型
+            var btnClose = this._uiLayer.getWidgetByName("btnClose");
+            btnClose.addTouchEventListener(this.onClick_btnBack,this);
 
             //人物模型r
+            var map = cc.TMXTiledMap.create(s_map2);
+            this.addChild(map, 0, TAG_TILE_MAP);
+            map.addComponent(MapController.create());
+
             ccs.ArmatureDataManager.getInstance().addArmatureFileInfo(s_hero_json);
             var armature = ccs.Armature.create("Hero");
-            this.m_hero = armature;
-            armature.getAnimation().play("loading");
-            armature.setAnchorPoint(0.5, 0.5);
-            armature.setPosition(333, 333);
-            var objPanel = this._uiLayer.getWidgetByName("Panel_55");
-            objPanel.addChild(armature);
+            map.addChild(armature, map.getChildren().length);
+            armature.addComponent(ActorController.create());
 
             return true;
         }
         return false;
     },
-    onClick_btnAnimationTest:function(){
-        cc.log("xxxxxxxxxxxxxxxxxxxxx")
-        // initialize director
+    onClick_btnBack:function(){
         var director = cc.Director.getInstance();
-        director.replaceScene(new AnimationScene());
+        director.replaceScene(new MainScene());
     },
-    onClick_btnFightScene:function(){
-        cc.log("xxxxxxxxxxxxxxxxxxxxx")
-        // initialize director
-        var director = cc.Director.getInstance();
-        director.replaceScene(new FightScene());
-    }
-
 });
 
-var MainScene = cc.Scene.extend({
+var TileScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
-        var layer = new MainLayer();
+        var layer = new TileLayer();
         this.addChild(layer);
         layer.init();
     }
