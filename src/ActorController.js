@@ -55,13 +55,26 @@ var ActorController = ccs.ComController.extend({
     },
 
     onMouseDragged:function (event) {
-        this._isTouchMoved = true;
+        var delta = event.getDelta();
+        if(delta.width >0 || delta.height>0){
+            this._isTouchMoved = true;
+        }
         return false;
     },
     onMouseDown:function (mouse) {
         this._isTouchMoved = false;
         return false;
     },
+    /**
+     * <p> called when the "mouseMoved" event is received.            <br/>
+     * Return YES to avoid propagating the event to other delegates.  </p>
+     * @param event
+     * @return {Boolean}
+     */
+    onMouseMoved:function (event) {
+        return false;
+    },
+
     onMouseUp:function (mouse) {
         if(!this._isTouchMoved){
             var tilePos = this._mapCon.getMapTiledPos(mouse._point);

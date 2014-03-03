@@ -48,10 +48,10 @@ var TileLayer = cc.Layer.extend({
             cc.log("start addComponent")
             map.addComponent(MapController.create());
             cc.log("end addComponent")
-//            ccs.ArmatureDataManager.getInstance().addArmatureFileInfo(s_hero_json);
-//            var armature = ccs.Armature.create("Hero");
-//            map.addChild(armature, map.getChildren().length);
-//            armature.addComponent(ActorController.create());
+            ccs.ArmatureDataManager.getInstance().addArmatureFileInfo(s_hero_json);
+            var armature = ccs.Armature.create("Hero");
+            map.addChild(armature, map.getChildren().length);
+            armature.addComponent(ActorController.create());
 
             return true;
         }
